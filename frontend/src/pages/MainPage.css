@@ -1,0 +1,444 @@
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.patient-text {
+  height: 5%;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.patient-text p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.main-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+/* 各个 section 的样式 */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%; /* 保持 section 的高度与 main-box 一致 */
+  color: #333;
+  font-size: 18px;
+}
+
+/* 左侧 30% */
+.left-section {
+  width: 30%;
+  gap: 20px;
+}
+
+/* 中间 30% */
+.center-section {
+  width: 30%;
+  gap: 60px;
+}
+
+/* 右侧 40% */
+.right-section {
+  width: 37%;
+  gap: 20px;
+}
+
+.padding-section{
+  width: 3%;
+}
+
+.profile {
+  position: relative; /* 设置父容器为相对定位 */
+  width: 90%;
+  flex-grow: 4;
+  margin-top: 20px;
+  background-color: #f9f9f9; /* 可以根据需要调整颜色 */
+}
+
+.symptom-description {
+    position: relative; /* 设置父容器为相对定位 */
+  width: 90%;
+  flex-grow: 5;
+  background-color: #ffffff;
+  border-radius: 20px; /* 设置圆角半径 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+.medical-history {
+position: relative; /* 设置父容器为相对定位 */
+  width: 90%;
+  flex-grow: 4;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 20px; /* 设置圆角半径 */
+}
+
+.infomation {
+position: relative; /* 设置父容器为相对定位 */
+width: 90%;
+flex-grow: 0;
+margin-top: 20px;
+background-color: #ffffff; /* 可以根据需要调整颜色 */
+border-radius: 20px; /* 设置圆角半径 */
+display: flex;
+flex-direction: column;
+}
+
+.ai-result {
+display: flex;
+flex-direction: column;
+position: relative; /* 设置父容器为相对定位 */
+width: 90%;
+flex-grow: 9;
+background-color: #ffffff;
+margin-bottom: 20px;
+border-radius: 20px; /* 设置圆角半径 */
+}
+
+.Weather {
+  display: flex;
+position: relative; /* 设置父容器为相对定位 */
+flex-direction: row;
+width: 90%;
+flex-grow: 0;
+background-color: #f0f4f5;
+border-radius: 80px; /* 设置圆角半径 */
+}
+
+.patient-data-statistics {
+    position: relative; /* 设置父容器为相对定位 */
+width: 90%;
+flex-grow: 1;
+background-color: #ffffff; /* 可以根据需要调整颜色 */
+border-radius: 20px; /* 设置圆角半径 */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+display: flex;
+flex-direction: column;
+}
+
+.anomaly {
+    position: relative; /* 设置父容器为相对定位 */
+width: 90%;
+flex-grow: 1.5;
+background-color: #ffffff;
+border-radius: 20px; /* 设置圆角半径 */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.final-function {
+    position: relative; /* 设置父容器为相对定位 */
+width: 90%;
+flex-grow: 1;
+margin-bottom: 20px;
+background-color: #f9f9f9;
+}
+
+.small-profile{
+    position: absolute;
+height: 100%;
+width: 80%;
+left: 10%;
+background-color: #ffffff;
+border-radius: 30px; /* 设置圆角半径 */
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+.mid-profile {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    left: 5%;
+    background-color: #ffffff;
+    border-radius: 30px; /* 设置圆角半径 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+.main-profile{
+position: absolute;
+height: 80%;
+width: 100%;
+background-color: #1eabe7;
+border-radius: 30px; /* 设置圆角半径 */
+}
+
+/* 圆形装饰 */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    top: -120px;
+    left: 350px;
+    background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
+}
+
+.circle2 {
+    width: 350px;
+    height: 350px;
+    bottom: -230px;
+    right: 130px;
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */
+}
+
+.personal-pic {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    height: 75%;
+    width: 30%;
+    border-radius: 30px; /* 设置圆角半径 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+  
+.personal-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.personal-info {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    height: 75%;
+    width: 55%;
+}
+
+.personal-info p {
+    color: #ffffff;
+    line-height: 1%;
+}
+
+.symptom-description-title {
+    position: absolute;
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    padding: 10px;
+    align-items: center; /* 垂直居中 */
+    font-weight: bold;
+}
+
+.symptom-description-text {
+    position: absolute;
+    margin: 10%;
+}
+
+.symptom-description-button {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    margin: 10%;
+    position: absolute;
+}
+
+.medical-history-title {
+    position: absolute;
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    /* margin-left: 5%; */
+    margin-right: 5%;
+    padding: 10px;
+    align-items: center; /* 垂直居中 */
+    font-weight: bold;
+}
+
+.medical-history-text {
+    position: absolute;
+    margin: 10%;
+    font-size: 80%;
+}
+
+.info-container {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 84%;
+    height: 70%;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 100%;
+    color: #666;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #d0e8ff; /* 设置 hr 的颜色 */
+    margin: 0;
+}
+
+.test-result {
+    display: flex;
+    position: absolute;
+    top: 95%;
+    left: 20%;
+    height: 20%;
+    width: 60%;
+    background-color: #f0f0f0;
+    color: #000000;
+    font-size: 200%;
+    border-radius: 20px; /* 设置圆角半径 */
+    z-index: 900; /* 确保该元素位于页面最上层 */
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.ai-result-container {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 84%;
+    height: 80%;
+}
+
+.ai-result-pic {
+    position: absolute;
+    width: 84%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 隐藏溢出部分 */
+}
+  
+.ai-result-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.weather-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1eabe7;
+  color: white;
+  font-size: 200%;
+  height: 100%;
+  width: 40%;
+  border-radius: 80px; /* 圆角背景 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.weather-widget el-icon{
+  position: absolute;
+  color: #ffffff;
+}
+
+.weather-date {
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 160%;
+  height: 100%;
+}
+
+.data-statistics-title {
+  position: absolute;
+  display: flex; 
+  justify-content: space-around;
+  width: 100%;
+  /* margin-left: 5%; */
+  margin-right: 5%;
+  padding: 10px;
+  align-items: center; /* 垂直居中 */
+  font-weight: bold;
+}
+
+.data-statistics-container {
+  height: 75%;
+  margin-top: auto;
+  width: 100%;
+}
+
+.anomaly-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.anomaly-text {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  font-size: 200%;
+  font-weight: bold;
+  z-index: 900;
+}
+
+.left-box {
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ left: 0;
+ height: 100%;
+ width: 30%;
+ background-color:#ffffff;
+ border-radius: 30px; /* 圆角背景 */
+ align-content: center;
+ justify-content: center; /* 垂直方向均匀分布 */
+}
+
+.right-box {
+  position: absolute;
+  right: 5%;
+  height: 100%;
+  width: 55%;
+  background-color:#ffffff;
+  border-radius: 30px; /* 圆角背景 */
+}
+
+.submit-button {
+  position: absolute;
+  background-color: #1eabe7;
+  left: 10%;
+  width: 80%; /* 使按钮宽度填充父容器 */
+  max-height: 50%; /* 使按钮高度填充父容器 */
+  min-height: 50%; /* 使按钮高度填充父容器 */
+  
+  padding: 0; /* 去掉默认 padding */
+  margin: 0; /* 去掉默认 margin */
+  border-radius: 30px; /* 圆角背景 */
+}
+
+
+.form-row {
+  display: flex;
+  gap: 20px; /* 控制输入框之间的间距 */
+}
+
+.el-form-item {
+  flex: 1; /* 使表单项自适应宽度 */
+}
