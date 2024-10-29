@@ -14,7 +14,9 @@
                     <div class="circle circle1"></div>
                     <div class="circle circle2"></div>
                     <div class="personal-pic">
-                        <img src="../assets/yoyo.jpg" alt="Profile Picture">    
+                        <img v-if="name == 'Yoyo'" src="../assets/yoyo.jpg" alt="Profile Picture"> 
+                        <img v-else-if="name == 'Wan Kang'" src="../assets/wankang.jpg" alt="Profile Picture">  
+                        <img v-else src="../assets/default.jpg" alt="Profile Picture">     
                     </div>
                     <div class="personal-info">
                         <p style="font-size: 90%;">Personal Infomation</p>
@@ -223,11 +225,6 @@
                 <el-form-item label="Chief Complaint" prop="chief_complaint">
                     <el-input v-model="formData.chief_complaint" type="textarea" />
                 </el-form-item>
-
-                <div class="dialog-footer">
-                    <el-button @click="dialogFormVisible = false">Cancel</el-button>
-                    <el-button type="primary" @click="onSubmit">Confirm</el-button>
-                </div>
             </el-form>
             <template #footer>
             <div class="dialog-footer">
@@ -299,7 +296,7 @@ import { reactive, ref } from 'vue'
                 diagnosis: [{ required: true, message: 'Please enter diagnosis', trigger: 'blur' }],
                 chief_complaint: [{ required: true, message: 'Please enter chief complaint', trigger: 'blur' }]
             },
-          name: "Yongon Li",
+          name: "Yoyo",
           id: "**** **** **** 1234",
           gender: "Female",
           diagnosis: "Patient reports experiencing stomach pain with a burning sensation that worsens after meals, especially when consuming oily or spicy foods. Additional symptoms include nausea, occasional vomiting, and bloating. The patient notes a decreased appetite and unintentional weight loss over the past few weeks, along with sleep disturbances due to pain.",
