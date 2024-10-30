@@ -9,12 +9,12 @@ from utils import make_prediction, make_waiting_time_prediction, anomaly_detecti
 
 # 创建 Flask 应用
 app = Flask(__name__)
-# CORS(app, resources={r"/predict_ktas": {"origins": "http://localhost:5173"}})  # 允许指定来源的跨域请求
+# CORS(app, resources={r"/predict_ktas": {"origins": "http://localhost:5173"}})  
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # 天气 API 的 URL 和密钥
 WEATHER_API_URL = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline"
-WEATHER_API_KEY = "EZLL9NFRQP9M3FGWRJAPSMLKG"  # 替换为实际的 API 密钥
+WEATHER_API_KEY = "EZLL9NFRQP9M3FGWRJAPSMLKG" 
 
 def get_weather_data(city):
     """Fetch current weather data for the specified city using Visual Crossing API."""
@@ -38,12 +38,12 @@ def get_weather_data(city):
 
 @app.route('/predict_ktas', methods=['POST'])
 def predict_ktas():
-    # 从请求中获取 JSON 数据
+    # JSON Data
     data = request.json
 
     print(data)
     
-    # 提取请求中的各项参数
+    # Request Body
     age = data.get("age")
     No_Patients_in_ER = data.get("No_Patients_in_ER")
     RR = data.get("RR")
@@ -54,7 +54,7 @@ def predict_ktas():
     injury = data.get("injury")
     Mental_state = data.get("Mental_state")
     
-    # 调用 make_prediction 函数进行预测
+    # use make_prediction to predict
     ktas_prediction = make_prediction(age, No_Patients_in_ER, RR, Saturation, NRS_pain, mode_of_transport, Chief_complain, injury, Mental_state)
     emergency = 1 if ktas_prediction == "EMERGENCY" else 0
 
@@ -85,9 +85,8 @@ def predict_ktas():
     day = datetime.now().day
     anomaly_prediction = anomaly_detection_prediction(diagnosis, month, hour, day)
 
-    
 
-    # 返回预测结果
+    # Return Prediction Outcome
     return jsonify({
         "ktas": ktas_prediction,
         "waiting_time": waiting_time_prediction,
